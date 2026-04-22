@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+        a 태그 : 어떤 링크/대상 으로 이동하는 태그
+
+        href 속성 : 이동할 경로
+        target 속성 : 어떻게 띄울건지
+            _blank  : 새창
+            _self   : 현재창
+    -->
+
+    <a href="https://www.naver.com/" target="_self" title="네이버링크">네이버 이동</a>
+    <br>
+    <a href="https://www.google.com/" target="_blank" title="구글링크">구글 이동</a>
+    <br>
+    <!-- a 태그는 인라인 태그, target 생략시 default값은 _self -->
+
+    <a href="tag03.html" target="_self">tag03.html로 이동</a><br>
+    <a href="./tag03.html" target="_self">tag03.html로 이동</a><br>
+    <a href="../start.html" target="_self">start.html로 이동</a><br>
+    <a href="../quiz/quiz01.html" target="_self">quiz01.html로 이동</a><br>
+
+    <!--
+        이미지태그 이미지표시 img
+        인라인태그
+        src속성 : 보여줄 이미지 소스의 경로
+    -->
+    <img src="img001.jpg" alt="지에엥">
+    <img src="./img001.jpg" alt="지에엥">
+    <img src="img/img002.jpg" alt="족발">
+    <img src="./img/img002.jpg" alt="족발">
+
+    <!-- 상위 다른 폴더 경로 -->
+    <img src="../../images/img001.jpg" alt="캐리어1">
+    <img src="../../images/img002.jpg" alt="캐리어2">
+
+
+    <!-- 외부 이미지 링크 주소를 통해서 연결 -->
+    <img src="https://image.gmarket.co.kr/hanbando/202604/2a827286-e166-411f-a933-35d803e3e05e.png" alt="프라이팬">
+    <img src="https://image.gmarket.co.kr/hanbando/202604/890564f6-bbec-48e9-acfb-054e60f94631.jpg" alt="닭가슴살통조림">
+
+
+    <br><br>
+
+    <a href="https://item.gmarket.co.kr/Item?spm=gmktpc.superdealhome.0.0.68407ecf7crYkd&goodscode=3961211085" target="_blank">
+        <img src="https://image.gmarket.co.kr/hanbando/202604/2a827286-e166-411f-a933-35d803e3e05e.png" alt="프라이팬">
+    </a>
+
+</body>
+</html>
