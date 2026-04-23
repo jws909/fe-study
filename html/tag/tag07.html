@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- label 태그 활용 -->
+    
+    <!-- 암묵적인 방법 -->
+    <label>치즈추가<input type="checkbox"></label>
+    <label>크러스트추가<input type="checkbox"></label>
+    <label>새우추가<input type="checkbox"></label>
+
+    <br><br>
+
+    <!-- 
+        명시적인 방법 
+        label for 속성
+        input id 속성
+    -->
+    <label for="chs">치즈추가</label>       <input type="checkbox" id="chs">
+    <label for="crust">크러스트추가</label>  <input type="checkbox" id="crust">
+    <label for="shrimp">새우추가</label>    <input type="checkbox" id="shrimp" checked>
+
+    <br><br>
+
+    <fieldset>
+        <legend>족발 사이즈</legend>
+        <label>대<input type="radio" name="size"></label>
+        <label>중<input type="radio" name="size"></label>
+        <label>소<input type="radio" name="size"></label>
+    </fieldset>
+
+    <br><br>
+
+    <fieldset>
+        <legend>블로그 글쓰기</legend>
+        <label>제목 <input type="text" value="초기값"></label><br>
+        내용
+        <textarea>콘텐츠가 있는 태그</textarea>
+        <textarea readonly>콘텐츠가 있는 태그</textarea>
+    </fieldset>
+
+    <br>
+
+    <select>    <!-- 콤보박스 -->
+        <option>원조김밥</option>
+        <option>치즈김밥</option>
+        <option selected>참치김밥</option>
+    </select>
+
+    <br>
+
+    <select>
+        <optgroup label="김밥">
+            <option>원조김밥</option>
+            <option>치즈김밥</option>
+            <option>참치김밥</option>
+        </optgroup>
+        <optgroup label="햄버거">
+            <option selected>싸이버거</option>
+            <option>빅맥</option>
+            <option>와퍼</option>
+        </optgroup>
+    </select>
+
+    <button>버튼태그</button>
+    <input type="button" value="인풋버튼">
+    <input type="submit">
+    <input type="reset">
+
+    <!-- form태그 안에 버튼태그를 넣을시 기본값이 submit이므로 type의 설정값을 바꿔줄수있다. -->
+    <button type="submit">제출버튼태그</button>
+    <button type="reset">초기화버튼태그</button>
+    <button type="button">버튼버튼태그</button>
+
+    <button>
+        <img src="img001.jpg">
+    </button>
+
+    <br><br>
+
+    <input type="text" maxlength="8">
+
+    일회용품 받지 않겠습니다. <input type="checkbox" checked>
+
+    <br><br><br><br>
+    
+    <form>
+        <input type="text" value="아이디 입력">
+        <input type="text" placeholder="아이디 입력">
+        <input type="reset">
+        <input type="submit">
+        <!-- submit 버튼으로 기본 인식 -->
+        <button>버튼태그</button>
+        <!-- form 태그 안에서의 버튼태그는 type을 명시해주는것이 좋다-->
+        <button type="button">그냥 버튼</button>
+    </form>
+    
+    <br><br><br><br>
+    <br><br><br><br>
+
+
+</body>
+</html>
