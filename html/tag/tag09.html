@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- audio video 미디어 표시 -->
+
+    <audio src="../../media/5second.mp3" controls></audio>
+
+    <!-- 위에부터 순서대로 지원되면 실행되고 아래는 실행X -->
+    <audio controls>
+        <source src="../../media/5second.mp3" type="audio/mpeg">
+        <source src="../../media/5second.ogg" type="audio/ogg">
+        <source src="../../media/5second.wav" type="audio/wav">
+    </audio>
+
+    <video src="../../media/5second.mp4" controls></video>
+
+    <video controls>
+        <source src="../../media/5second.mp4" type="video/mp4">
+        <source src="../../media/5second.mpeg" type="video/mpeg">
+        <source src="../../media/5second.avi" type="video/x-msvideo">
+    </video>
+
+    <!-- 자동 재생 -->
+    <!-- muted를 넣지않으면 자동재생되지 않음(브라우저 정책) -->
+    <video src="../../media/5second.mp4" autoplay muted loop></video>
+
+    <iframe width="807" height="740" src="https://www.youtube.com/embed/3s1jaFDrp5M?list=RDCLAK5uy_nr0cQgAVMsVsHgz8Ryftxqez9G4nittWw" title="EPIK HIGH (에픽하이) - BORN HATER ft. Beenzino, Verbal Jint, B.I, MINO, BOBBY [Official MV]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
