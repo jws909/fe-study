@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        /* #thead {
+            color: blue;
+        }
+
+        .red > td {
+            color: red;
+        } */
+
+        /* 가능하면 상위에 id를 줘서 구체적인 범위를 주고 우선순위를 높이는게 좋다 */
+        #quiz-table #thead {
+            color: blue;
+        }
+
+        #quiz-table .red > td {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="quiz-table">
+        <tr id="thead">
+            <th>순번</th>
+            <th>아이디</th>
+            <th>이름</th>
+        </tr>
+        <tr class="red">
+            <td>1</td>
+            <td>apple12</td>
+            <td>유재석</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>orange5</td>
+            <td>강호동</td>
+        </tr>
+        <tr class="red">
+            <td>3</td>
+            <td>freshwater</td>
+            <td>신동엽</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>takcard</td>
+            <td>탁재훈</td>
+        </tr>
+        <tr class="red">
+            <td>5</td>
+            <td>lognyeon</td>
+            <td>장도연</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
