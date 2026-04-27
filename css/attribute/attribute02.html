@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <style>
+        .font-attr1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            /* 소문자를 작은 대문자로 변경 */
+            font-variant: small-caps;
+            color: darkblue;
+            /* 자간거리 */
+            letter-spacing: 10px;
+            /* 행간거리 */
+            line-height: 50px;
+        }
+
+        .font-attr2 {
+            /* 700 == bold */
+            font-weight: bold;
+            /* 
+                italic : 이탤릭체 
+                oblique : 기울임
+            */
+            font-style: oblique;
+        }
+
+        .font-box {
+            /* 정렬 */
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .east-sea-dokdo-regular {
+            font-family: "East Sea Dokdo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .nanum-gothic-coding-regular {
+            font-family: "Nanum Gothic Coding", monospace;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .inbox1 {
+            /* em 상대크기 부모요소의 크기 대비 */
+            font-size: 2em;
+        }
+
+        .inbox2 {
+            /* rem 상대크기 */
+            /* HTML 크기 대비 */
+            /* HTML 기본 텍스트 크기 16px */
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>Font attr1 기본 텍스트</p>
+
+    <p class="font-attr1">Font attr1</p>
+    <p class="font-attr2">Font attr2 글씨 속성</p>
+
+    <!-- 이탤릭 태그이다. 안쓴다. -->
+    <i>Font attr</i>
+
+    <div class="font-box">
+        <p class="east-sea-dokdo-regular">font box 글자 24px</p>
+        <p class="inbox1">font box 글자 48px(2em)</p>
+        <p class="inbox2">font box 글자 32px(2rem)</p>
+    </div>
+
+    <div class="font-box2">
+        <p class="nanum-gothic-coding-regular">font box 글자 16px</p>
+        <p class="inbox1">font box 글자 32px(2em)</p>
+        <p class="inbox2">font box 글자 32px(2rem)</p>
+    </div>
+
+    <p>
+        오늘의 특가 
+        <del>5,000원</del>
+        <ins>3,000원</ins>
+    </p>
+    <p>
+        오늘의 특가 
+        <span style="text-decoration: line-through;">5,000원</span>
+        <span style="text-decoration: underline;">3,000원</span>
+    </p>
+</body>
+</html>
