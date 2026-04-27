@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 브라우저 기본 margin, padding을 삭제(0) */
+        /* 필요한 경우에만 margin, padding을 부여하기 위함 */
+        /* box-sizing의 기본값은 content-box content크기만을 계산한다 */
+        /* border-box는 border내부를 전부 크기로 계산해서 편하다 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            /* margin: 10px 30px; */
+            margin: 30px;
+            border: 2px solid blue;
+            padding: 15px;
+        }
+
+        /* box1 margin-bottom은 30px, box2 margin-top은 50px */
+        /* 둘이 겹치면 큰 쪽으로 적용한다 즉 box1 box2간의 간격은 50px */
+
+        .box2 {
+
+            margin: 50px;
+            /* margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px; */
+
+            padding-left: 30px;
+            padding-top: 2rem;
+
+            /* border: 2px solid red; */
+            border-width: 2px;
+            border-style: dashed;
+            border-color: red;
+
+            width: 200px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        box1
+    </div>
+
+    <div class="box2">
+        box2
+    </div>
+
+    <p>다른 요소 p태그</p>
+</body>
+</html>
