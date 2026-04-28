@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .red-box {
+            background-color: red;
+
+            position: relative;
+            left: 100px;
+            z-index: 10;
+        }
+
+        .green-box {
+            background-color: green;
+
+            /* absolute는 흐름에서 벗어나서 자유롭게 하고 다음요소부터는 다시 흐름대로 가게하고싶을때 쓰면좋다. */
+            position: absolute;
+            /* 부모인 body태그를 기준해서 50px씩 이동 */
+            left: 50px;
+            top: 50px;
+            z-index: 5;
+        }
+
+        .blue-box {
+            background-color: blue;
+
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+
+</body>
+</html>
