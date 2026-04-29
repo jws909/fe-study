@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .black-box {
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .red-box {
+            background-color: red;
+            float: left;
+        }
+
+        .green-box {
+            background-color: green;
+            float: left;
+        }
+
+        .blue-box {
+            background-color: blue;
+            float: left;
+        }
+
+        .next {
+            background-color: gray;
+        }
+
+        /* 
+        .clear-box {
+            clear: both;
+        } 
+        */
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        /*
+            float(공중에 뜸)효과로 공간/위치 인식이 안될때 해결방법
+
+            1. 차지해야하는 그 크기만큼 임의의 요소 추가 -> 공간차지하는 용도
+            
+            2. clear 속성 활용
+                1) float가 적용된 요소를 중 마지막 요소 
+                    / 다음 float 적용하지 않을 요소에 적용
+                
+                2) 가상요소 선택자 활용 clear
+        */
+    </style>
+</head>
+<body>
+
+    <div class="box black-box">
+    </div><div class="box black-box">
+    </div><div class="box black-box"></div>
+
+    <div class="container">
+        <div class="box red-box">
+        </div><div class="box green-box">
+        </div><div class="box blue-box"></div>
+        <!-- <div class="clear-box"></div> -->
+        <!-- 별도의 clear 용 요소 활용 -->
+    </div>
+    
+    <!-- 공간 차지용 요소 -->
+    <!-- <div class="box"></div> -->
+    <div class="box next"></div>
+
+    <!-- 
+        부모요소의 크기
+        고정된 사이즈를 부여하면 -> 고정된 사이즈
+        - 고정된 사이즈인데 자식에 해당하는 컨텐츠 요소가 더 길어서 넘치면?
+        - overflow 속성 적용
+            scroll : 부모요소에 스크롤 적용
+            hidden : 넘쳐 흘러나는 부분을 숨김
+
+        고정된 사이즈 X -> 자식이 차지하는 크기만큼
+    -->
+    <div style="background-color: lightblue; height: 150px; overflow: hidden;">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas mollitia porro sunt. Quidem sint nisi iure voluptas tempora? Neque delectus corporis, ad dolores perferendis mollitia cum fugit ducimus laudantium.</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas mollitia porro sunt. Quidem sint nisi iure voluptas tempora? Neque delectus corporis, ad dolores perferendis mollitia cum fugit ducimus laudantium.</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quas mollitia porro sunt. Quidem sint nisi iure voluptas tempora? Neque delectus corporis, ad dolores perferendis mollitia cum fugit ducimus laudantium.</span>
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos velit, pariatur omnis quos, quia aspernatur ut accusantium nesciunt fugiat odio deserunt magnam nulla possimus voluptas accusamus aliquam perferendis saepe iusto?</p>
+</body>
+</html>
