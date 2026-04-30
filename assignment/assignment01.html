@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .guide, .terms {
+            text-decoration: underline;
+        }
+
+        .register {
+            margin-top: 100px;
+            border: 2px solid black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+        }
+
+        .tab {
+            display: flex;
+        }
+
+        .input-area {
+            display: flex;
+            flex-direction: column;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="register">
+        <span class="btn" style="align-self: end;">x</span>
+        <div class="banner">
+            <p style="font-size: 24px;">지금 가입하시면</p>
+            <p style="font-size: 26px; font-weight: bold;">웰컴쿠폰을 드려요!</p>
+        </div>
+        <div class="tab">
+            <div class="btn login">로그인</div>
+            <div class="btn reg">회원가입</div>
+        </div>
+        <form>
+            <div class="input-area email">
+                <label for="email">이메일</label>
+                <input type="text" id="email">
+            </div>
+            <div class="input-area name">
+                <label for="name">이름/업체명</label>
+                <input type="text" id="name">
+            </div>
+            <div class="input-area passwd">
+                <label for="passwd">비밀번호</label>
+                <input type="text" id="passwd">
+            </div>
+            <div class="input-area passwd-chk">
+                <label for="passwd-chk">비밀번호 확인</label>
+                <input type="text" id="passwd-chk">
+            </div>
+            <p style="align-self: center;">
+                <span class="btn guide">개인정보수집이용안내</span>
+                및
+                <span class="btn terms">약관</span>에 동의합니다.
+            </p>
+            <div class="btn regres"><span>회원 가입하기</span></div>
+        </form>
+        <span class="btn">SNS로 간편하게 가입하기</span>
+    </div>
+</body>
+</html>
