@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .horizontal-container{
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .red-box {
+            background-color: red;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        .blue-box {
+            background-color: blue;
+            transition-property: background-color;
+            transition-duration: 2s;
+        }
+        .black-box {
+            background-color: black;
+            transition-property: transform;
+            transition-duration: 2s;
+        }
+        .green-box {
+            background-color: green;
+            transition-property: border;
+            transition-duration: 1s;
+        }
+        .yellow-box {
+            background-color: yellow;
+            transition-property: border;
+            transition-duration: 1s;
+        }
+
+        .container:hover .red-box {
+            width: 400px;
+        }
+
+        .container:hover .blue-box {
+            background-color: purple;
+        }
+
+        .container:hover .black-box {
+            transform: translateX(200px);
+        }
+
+        .container:hover .green-box:hover {
+            border: 10px solid red;
+        }
+
+        .container:hover .yellow-box:hover {
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box blue-box"></div>
+        <div class="box black-box"></div>
+        <div class="horizontal-container">
+            <div class="box green-box"></div>
+            <div class="box yellow-box"></div>
+        </div>
+    </div>
+</body>
+</html>
