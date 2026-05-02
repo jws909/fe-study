@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -22,10 +23,15 @@
         .register {
             margin-top: 100px;
             border: 2px solid black;
-            padding: 20px;
+            padding: 30px;
+            padding-bottom: 15px;
             display: flex;
-            flex-direction: column;
             justify-self: center;
+            position: relative;
+        }
+
+        .fcontainer {
+            width: 300px;
         }
 
         .tab {
@@ -36,45 +42,127 @@
             display: flex;
             flex-direction: column;
         }
+
+        .banner {
+            margin-bottom: 30px;
+        }
+
+        .tab {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #D5D5D5;
+        }
+
+        .login {
+            color: #D5D5D5;
+            margin: 0 20px 10px 0;
+        }
+
+        .reg {
+            font-weight: bold; 
+            color: #4286F5;
+            border-bottom: 3px solid #4286F5;
+        }
+
+        .input-area, .agree, .regi {
+            margin-bottom: 10px;
+        }
+
+        .input-area label {
+            color: #7C7C7C;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+        .input-area input {
+            height: 35px;
+            border: 1px solid #D5D5D5;
+            padding: 0 10px;
+            font-size: 13px;
+        }
+
+        .agree {
+            display:flex;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .sns {
+            text-align: center;
+            font-size: 14px;
+            color: #4286F5;
+            text-decoration: underline;
+        }
+        
+        .regi {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 40px;
+            background-color: #4286F5;
+        }
+
+        .regi input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        #chk {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        
+        .fa-xmark {
+            font-size: 13px;
+        }
         
     </style>
 </head>
 <body>
     <div class="register">
-        <span class="btn" style="align-self: end;">x</span>
-        <div class="banner">
-            <p style="font-size: 24px;">지금 가입하시면</p>
-            <p style="font-size: 26px; font-weight: bold;">웰컴쿠폰을 드려요!</p>
+        <div class="fcontainer">
+            <div class="banner">
+                <p style="font-size: 22px; color: #7C7C7C;">지금 가입하시면</p>
+                <p style="font-size: 24px; font-weight: bold; color: #434343;">웰컴쿠폰을 드려요!</p>
+            </div>
+            <div class="tab">
+                <div class="btn login">로그인</div>
+                <div class="btn reg">회원가입</div>
+            </div>
+            <form>
+                <div class="input-area email">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="이메일을 입력해주세요.">
+                </div>
+                <div class="input-area name">
+                    <label for="name">이름/업체명</label>
+                    <input type="text" id="name" placeholder="2자 이상 20자 이하">
+                </div>
+                <div class="input-area passwd">
+                    <label for="passwd">비밀번호</label>
+                    <input type="password" id="passwd" placeholder="영문 숫자 특수문자 조합 6-16자리">
+                </div>
+                <div class="input-area passwd-chk">
+                    <label for="passwd-chk">비밀번호 확인</label>
+                    <input type="password" id="passwd-chk" placeholder="비밀번호를 다시 입력해주세요.">
+                </div>
+                <p class="agree">
+                    <input type="checkbox" id="chk">
+                    <label for="chk">
+                        <span class="btn guide">개인정보수집이용안내</span>
+                        및
+                        <span class="btn terms">약관</span>에 동의합니다.
+                    </label>
+                </p>
+                <div class="btn regi"><input type="submit" value="회원 가입하기"></input></div>
+            </form>
+            <p class="btn sns">SNS로 간편하게 가입하기</p>
         </div>
-        <div class="tab">
-            <div class="btn login">로그인</div>
-            <div class="btn reg">회원가입</div>
-        </div>
-        <form>
-            <div class="input-area email">
-                <label for="email">이메일</label>
-                <input type="text" id="email">
-            </div>
-            <div class="input-area name">
-                <label for="name">이름/업체명</label>
-                <input type="text" id="name">
-            </div>
-            <div class="input-area passwd">
-                <label for="passwd">비밀번호</label>
-                <input type="text" id="passwd">
-            </div>
-            <div class="input-area passwd-chk">
-                <label for="passwd-chk">비밀번호 확인</label>
-                <input type="text" id="passwd-chk">
-            </div>
-            <p style="align-self: center;">
-                <span class="btn guide">개인정보수집이용안내</span>
-                및
-                <span class="btn terms">약관</span>에 동의합니다.
-            </p>
-            <div class="btn regres"><span>회원 가입하기</span></div>
-        </form>
-        <span class="btn">SNS로 간편하게 가입하기</span>
+        <span class="btn" style="position: absolute; top: 10px; right: 15px;"><i class="fa-solid fa-xmark"></i></span>
     </div>
 </body>
 </html>
