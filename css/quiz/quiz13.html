@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .h-container {
+            display: flex;
+        }
+
+        .v-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+        }
+
+        .footer-left, .footer-right {
+            width: 50%;
+        }
+
+        .main > .box {
+            width: 40%; 
+            height: 200px;
+        }
+
+        .main .v-container {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            .footer {
+                flex-direction: column;
+            }
+            .footer-left, .footer-right {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .header, .main {
+                flex-direction: column;
+            }
+            .main > .box {
+                width: 100%;
+                height: 150px;
+            }
+            .main .v-container {
+                width: 100%;
+                flex-direction: row;
+            }
+        }
+        @media screen and (max-width: 350px) {
+            .h-container, .main .v-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header h-container">
+            <div class="box" style="background-color: yellow;"></div>
+            <div class="box" style="background-color: gray;"></div>
+        </div>
+        <div class="box" style="background-color: blueviolet;"></div>
+        <div class="main h-container">
+            <div class="box" style="background-color: lightblue;"></div>
+            <div class="v-container">
+                <div class="box" style="background-color: saddlebrown;"></div>
+                <div class="box" style="background-color: plum;"></div>
+            </div>
+        </div>
+        <div class="footer h-container">
+            <div class="footer-left h-container">
+                <div class="box" style="background-color: yellow;"></div>
+                <div class="box" style="background-color: orange;"></div>
+            </div>
+            <div class="footer-right h-container">
+                <div class="box" style="background-color: lightcoral;"></div>
+                <div class="box" style="background-color: yellowgreen;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
