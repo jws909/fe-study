@@ -1,0 +1,24 @@
+.navbar ul {
+    display: flex;
+    list-style: none;
+    background-color: aquamarine;
+}
+
+.navbar li {
+    width: 120px;
+    height: 50px;
+    border: 1px solid green;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li:hover {
+    background-color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
