@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        .first, .second{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            width: 100%;
+            height: 200px;
+            background-color: lightskyblue;
+            margin: 10px;
+        }
+
+        .blank {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        @media screen and (max-width: 600px) {
+            .first, .second {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <div class="item"><p>CSS</p></div>
+            <div class="item"><p>HTML</p></div>
+        </div>
+        <div class="second">
+            <div class="item"><p>자바스크립트</p></div>
+            <div class="item blank"><p></p></div>
+        </div>
+        
+    </div>
+</body>
+</html>
