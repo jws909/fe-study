@@ -66,11 +66,11 @@ console.log(arr3);
 // 전개연산자 ...
 arr2 = [4,5,6];
 let arr4 = [...arr2]; //깊은복사
-let arr5 = arr2.concat([]);
+//let arr5 = arr2.concat([]);
 arr4[0] = 777;
-arr5[1] = 777;
+//arr5[1] = 777;
 console.log(arr4);
-console.log(arr5);
+//console.log(arr5);
 console.log(arr2);
 
 let x = [1,2,3];
