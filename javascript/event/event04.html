@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form>
+        <input type="text" id="input_text">
+    </form> -->
+    
+    <input type="text" id="input_text">
+
+    <script>
+        const input_text = document.getElementById('input_text');
+
+        input_text.addEventListener('keydown', (eventInfo)=>{
+                                    // 키보드 이벤트 관련 정보 -> 매개변수로 전달
+            console.log("keydown 실행됨");
+            console.log(eventInfo);
+
+            //Deprecated 사용가능하지만 권장하지않는 방법
+            if(eventInfo.keyCode == 13){
+                console.log('keyCode 13 엔터키 눌림');
+            }
+
+            // key 사용 권장
+            if(eventInfo.key == 'Enter'){
+                console.log('key "Enter" 엔터키 눌림');
+            }
+
+            if(eventInfo.key == 'q'){
+                location.href = "https://coupang.com";
+            }
+
+            //keypress deprecated
+
+            input_text.addEventListener('keyup', (event)=>{
+                console.log('keyup 이벤트 발생');
+            });
+
+            input_text.addEventListener('focus', (event)=>{
+                console.log('focus 이벤트 발생');
+            });
+
+            //focus 반대
+            input_text.addEventListener('blur', (event)=>{
+                console.log('blur 이벤트 발생');
+            });
+        });
+    </script>
+</body>
+</html>
