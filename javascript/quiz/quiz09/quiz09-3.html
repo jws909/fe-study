@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .back-gray {
+            background-color: gray;
+        }
+
+        .text-red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 <span>텍스트</span></p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+    <script>
+        const divMain = document.getElementById('main');
+        const p1 = document.getElementById('p1');
+        const p2Text = document.querySelector('#p2 span');
+
+        function changeMain(){
+            divMain.classList.toggle('back-gray');
+        }
+
+        function changeP1(){
+            p1.classList.toggle('text-red');
+        }
+
+        let index = 0;
+        const textArr = ['하나','둘','셋','넷','텍스트'];
+        function changeP2(){
+            index = index % textArr.length;
+            p2Text.textContent = textArr[index];
+            index++;
+        }
+    </script>
+</body>
+
+</html>
