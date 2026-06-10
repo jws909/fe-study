@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btnCon {
+            display: flex;
+            margin: 20px;
+            gap: 7px;
+        }
+
+        .btnCon button {
+            width: 40px;
+            height: 25px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+        }
+
+        .horizontal {
+            animation-name: horizontal-ani;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        .vertical {
+            animation-name: vertical-ani;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        .diagonal {
+            animation-name: diagonal-ani;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+
+        @keyframes horizontal-ani {
+            0% {
+                left: 0px;
+                background-color: blue;
+            }
+            50% {
+                left: 150px;
+                background-color: orange;
+            }
+            100% {
+                left: 300px;
+                background-color: pink;
+            }
+        }
+
+        @keyframes vertical-ani {
+            0% {
+                top: 0px;
+                background-color: blue;
+            }
+            50% {
+                top: 150px;
+                background-color: orange;
+            }
+            100% {
+                top: 300px;
+                background-color: pink;
+            }
+        }
+
+        @keyframes diagonal-ani {
+            0% {
+                top: 0px;
+                left: 0px;
+                background-color: blue;
+            }
+            50% {
+                top: 150px;
+                left: 150px;
+                background-color: orange;
+            }
+            100% {
+                top: 300px;
+                left: 300px;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="btnCon">
+        <button id="play">재생</button>
+        <button id="stop">정지</button>
+    </div>
+    <div class="container">
+        <div class="box horizontal"></div>
+        <div class="box vertical"></div>
+        <div class="box diagonal"></div>
+    </div>
+
+    <script>
+        const playBtn = document.getElementById('play');
+        const stopBtn = document.getElementById('stop');
+
+        const cont = document.getElementsByClassName('container')[0];
+        const boxes = document.getElementsByClassName('box');
+
+
+        // cont.addEventListener('mouseover', (e)=>{
+        //     if(e.target === cont){
+        //         for(let i=0; i<boxes.length; i++){
+        //             boxes[i].style.animationPlayState = 'running';
+        //         }
+        //     }
+        // });
+
+        cont.addEventListener('mouseenter', (e)=>{
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].style.animationPlayState = 'running';
+            }
+        });
+
+        cont.addEventListener('mouseleave', (e)=>{
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].style.animationPlayState = 'paused';
+            }
+        });
+
+        for(let i=0; i<boxes.length; i++){
+            boxes[i].addEventListener('mouseenter', ()=>{
+                boxes[i].style.animationPlayState = 'paused';
+            });
+            
+            boxes[i].addEventListener('mouseleave', ()=>{
+                boxes[i].style.animationPlayState = 'running';
+            });
+        }
+
+        playBtn.addEventListener('click', ()=>{
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].style.animationPlayState = 'running';
+            }
+        });
+
+        stopBtn.addEventListener('click', ()=>{
+            for(let i=0; i<boxes.length; i++){
+                boxes[i].style.animationPlayState = 'paused';
+            }
+        });
+
+    </script>
+</body>
+</html>
