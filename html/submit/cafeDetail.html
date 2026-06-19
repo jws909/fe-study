@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페 상세</title>
+    <link rel="stylesheet" href="cafeDetail.css">
+</head>
+
+<body>
+
+    <div class="detail-wrap">
+
+        <!-- HEADER -->
+        <header class="detail-header">
+
+            <a href="home.html" class="detail-back-btn">
+                ← 뒤로가기
+            </a>
+
+            <a href="cart.html" class="detail-cart-btn">
+                🛒 장바구니
+                <span id="cartBadge" class="cart-badge">0</span>
+            </a>
+
+        </header>
+
+        <!-- MAIN -->
+        <main class="detail-main">
+
+            <!-- HERO -->
+            <img id="cafeImage" class="cafe-hero-img" src="" alt="cafe">
+
+            <h1 id="cafeName" class="cafe-hero-name"></h1>
+
+            <p id="cafeDescription" class="cafe-hero-desc"></p>
+
+            <div class="cafe-hero-loc">
+                📍
+                <span id="cafeLocation"></span>
+            </div>
+
+            <!-- MENU SECTION -->
+            <section class="category-section">
+
+                <h2 class="category-title">메뉴</h2>
+
+                <div id="menuGrid" class="menu-grid"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- TOAST -->
+    <div id="toastMsg" class="toast-msg"></div>
+
+    <script type="module" src="./detail.js"></script>
+
+</body>
+
+</html>
